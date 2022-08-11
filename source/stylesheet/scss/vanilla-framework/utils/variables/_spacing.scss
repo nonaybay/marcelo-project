@@ -1,0 +1,43 @@
+@use 'sass:math';
+
+
+//  Referência:
+//  https://github.com/canonical/vanilla-framework/blob/main/scss/_settings_spacing.scss
+
+
+
+
+
+$ms-ratio: math.div(16, 14);
+$sp-unit-ratio: 0.5;
+
+$sp-unit: ($sp-unit-ratio * 1rem);
+
+$font-sizes: (
+  'h1': math.pow($ms-ratio, 8),
+  'h2': math.pow($ms-ratio, 6),
+  'h3': math.pow($ms-ratio, 4),
+  'h4': math.pow($ms-ratio, 2),
+
+  'h1-mobile': math.pow($ms-ratio, 6),
+  'h2-mobile': math.pow($ms-ratio, 4.5),
+  'h3-mobile': math.pow($ms-ratio, 3),
+  'h4-mobile': math.pow($ms-ratio, 1.5),
+
+  'small': math.pow($ms-ratio, -1),
+  'x-small': math.pow($ms-ratio, -2),
+);
+
+$line-heights: (
+  'h1': ($sp-unit * 7),
+  'h2': ($sp-unit * 6),
+  'h3': ($sp-unit * 5),
+  'h4': ($sp-unit * 4),
+  'h1-mobile': ($sp-unit * 6),
+  'h2-mobile': ($sp-unit * 5),
+  'h3-mobile': ($sp-unit * 4),
+  'h4-mobile': ($sp-unit * 3),
+  'default-text': ($sp-unit * 3),
+  'small': ($sp-unit * 2.5),
+  'x-small': ($s-unit * 2),
+);
